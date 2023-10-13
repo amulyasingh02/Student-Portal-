@@ -1,3 +1,5 @@
+CREATE DATABSE lgdb;
+USE lgdb;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
