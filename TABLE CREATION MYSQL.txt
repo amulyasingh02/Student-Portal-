@@ -1,0 +1,33 @@
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL PRIMARY KEY,
+  `password` varchar(255) NOT NULL
+) ;
+
+
+CREATE TABLE `details` (
+  `Name` varchar(100) NOT NULL,
+  `EmailID` varchar(100) NOT NULL PRIMARY KEY,
+  `ContactNo` varchar(20) NOT NULL,
+  `CollegeName` varchar(100) NOT NULL,
+  `Course` varchar(100) NOT NULL,
+  `Semester` int(11) NOT NULL,
+  `ProjectTitle` varchar(255) NOT NULL,
+  `TSLDepartment` varchar(100) NOT NULL,
+  `ProjectGuide` varchar(100) NOT NULL
+);
+
+CREATE TABLE `pfp` (
+  `EmailID` varchar(255) NOT NULL PRIMARY KEY,
+  `imgsz` int(11) DEFAULT NULL,
+  `imgloc` varchar(255) DEFAULT NULL
+);
+
+CREATE TABLE `feedback` (
+  `ID` int(11) NOT NULL PRIMARY KEY,
+  `Name` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Contact` varchar(20) NOT NULL,
+  `Message` text NOT NULL
+);

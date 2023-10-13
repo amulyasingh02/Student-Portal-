@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ece5e5;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        
+
+        h1 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #home-link {
+            display: block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #home-link:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form action="details.php" method="post">
+        <h1>Student Project Information</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contactNo">Contact Number:</label>
+        <input type="tel" id="contactNo" name ="contactNo" required>
+
+        <label for="collegeName">College Name:</label>
+        <input type="text" id="collegeName" name="collegeName" required>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required>
+
+        <label for="semester">Semester:</label>
+        <input type="number" id="semester" name="semester" required>
+
+        <label for="projectTitle">Project Title:</label>
+        <input type="text" id="projectTitle" name="projectTitle" required>
+
+        <label for="tslDepartment">TSL Department:</label>
+        <input type="text" id="tslDepartment" name="tslDepartment" required>
+
+        <label for="projectGuide">Project Guide:</label>
+        <input type="text" id="projectGuide" name="projectGuide" required>
+
+        <input type="submit" value="Submit">
+        <a id="home-link" href="dashboard.php">Home</a>
+
+    </form>
+
+</div>
+</body>
+</html>
