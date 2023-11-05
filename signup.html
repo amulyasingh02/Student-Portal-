@@ -50,6 +50,21 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        .login-link {
+            text-align: center;
+            margin-top: 4px;
+            
+        }
+
+        .login-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -65,6 +80,14 @@
         <input type="password" id="confirm_password" name="confirm_password" required><br><br>
 
         <input type="submit" value="Sign Up">
+
+        <div class="login-link">
+            Log In with existing account? <a href="login.html">Log In</a>
+        </div>
+        <div class="login-link">
+            Log in as Admin? <a href="adminLogin.html">Admin</a>
+        </div>
+    </div>
     </form>
 </body>
 </html>

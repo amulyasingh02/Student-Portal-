@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (!isset($_SESSION['email'])) {
+    echo '<script>alert("Please Log in first");</script>';
+    header("refresh: 0.0; url=login.php");
+    exit();
+}
+
 if ($_SESSION["profile_completed"]) {
     // Use JavaScript to show an alert message
     echo '<script>alert("Profile  Completed,Click Show Profile!");</script>';
@@ -9,7 +15,7 @@ if ($_SESSION["profile_completed"]) {
 
 else
 {
-    header("location:details.html");
+    header("location:details.php");
 }
 
 ?>

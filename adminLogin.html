@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Admin Login Page</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -74,8 +74,8 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
-        <form action="login.php" method="post">
+        <h2>Admin Login</h2>
+        <form action="adminLogin.php" method="post">
             <div class="input-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -86,11 +86,9 @@
             </div>
             <button type="submit" class="login-button">Login</button>
         </form>
+        
         <div class="signup-link">
-            Don't have an account? <a href="signup.html">Sign Up</a>
-        </div>
-        <div class="signup-link">
-            Log in as Admin? <a href="adminLogin.html">Admin</a>
+            Log in as Trainee? <a href="login.html">Trainee</a>
         </div>
     </div>
 </body>

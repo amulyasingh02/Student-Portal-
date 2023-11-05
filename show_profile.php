@@ -1,5 +1,11 @@
 <?php  
 session_start();
+if (!isset($_SESSION['email'])) {
+    echo '<script>alert("Please Log in first");</script>';
+    header("refresh: 0.0; url=login.php");
+    exit();
+}
+
 $dbHost = "localhost:3306"; // Change this if your MySQL server is on a different host
 $dbUsername = "root"; // 
 $dbPassword = ""; // MySQL password (default for XAMPP)

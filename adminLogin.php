@@ -22,7 +22,7 @@ $password = $_POST['password'];
 $email = mysqli_real_escape_string($conn, $email);
 
 // Query the database
-$query = "SELECT * FROM users WHERE email = '$email'";
+$query = "SELECT * FROM admin WHERE email = '$email'";
 $result = mysqli_query($conn, $query);
 
 if (!$result) {
@@ -42,8 +42,7 @@ if (mysqli_num_rows($result) === 1) {
         // Password is correct, user is authenticated
         // You can redirect the user to a dashboard or some other page
         $_SESSION["email"]=$email;
-        //echo file_get_contents('dashboard.php');
-header("location:dashboard.php");
+header("location:admin/adminDashboard.php");
     
 }
 

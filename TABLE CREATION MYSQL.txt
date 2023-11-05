@@ -7,18 +7,23 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL
 ) ;
 
+CREATE TABLE `admin` (
+  `email` varchar(255) NOT NULL PRIMARY KEY,
+  `password` varchar(255) NOT NULL
+) 
 
 CREATE TABLE `details` (
   `Name` varchar(100) NOT NULL,
-  `EmailID` varchar(100) NOT NULL PRIMARY KEY,
+  `EmailID` varchar(100) NOT NULL,
   `ContactNo` varchar(20) NOT NULL,
   `CollegeName` varchar(100) NOT NULL,
   `Course` varchar(100) NOT NULL,
   `Semester` int(11) NOT NULL,
   `ProjectTitle` varchar(255) NOT NULL,
   `TSLDepartment` varchar(100) NOT NULL,
-  `ProjectGuide` varchar(100) NOT NULL
-);
+  `ProjectGuide` varchar(100) NOT NULL,
+  `joinDate` datetime DEFAULT NULL
+)
 
 CREATE TABLE `pfp` (
   `EmailID` varchar(255) NOT NULL PRIMARY KEY,
@@ -26,10 +31,25 @@ CREATE TABLE `pfp` (
   `imgloc` varchar(255) DEFAULT NULL
 );
 
+
 CREATE TABLE `feedback` (
-  `ID` int(11) NOT NULL PRIMARY KEY,
-  `Name` varchar(255) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Contact` varchar(20) NOT NULL,
-  `Message` text NOT NULL
+  `ID` int(11) NOT NULL,
+  `Name` varchar(255) DEFAULT NULL,
+  `EmailID` varchar(255) DEFAULT NULL,
+  `Contact` varchar(255) DEFAULT NULL,
+  `Message` text DEFAULT NULL,
+  `q1` varchar(255) DEFAULT NULL,
+  `q2` varchar(255) DEFAULT NULL,
+  `q3` varchar(255) DEFAULT NULL,
+  `q4` varchar(255) DEFAULT NULL,
+  `q5` varchar(255) DEFAULT NULL,
+  `subTime` datetime DEFAULT NULL,
+  `classNo` int(11) DEFAULT NULL
+) ;
+
+CREATE TABLE `department` (
+  `TSLDepartment` varchar(255) DEFAULT NULL,
+  `ProjectGuide` varchar(255) DEFAULT NULL,
+  `ProjectTitle` varchar(255) DEFAULT NULL
 );
+
